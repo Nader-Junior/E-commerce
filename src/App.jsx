@@ -12,7 +12,7 @@ import NotFound from './Components/NotFound/NotFound';
 import VerifyCode from './Components/VerifyCode/VerifyCode';
 import ResetPassword from './Components/ResetPassword/ResetPassword';
 import MyOrders from './Components/MyOrders/MyOrders';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import AuthContextProvider from './context/AuthContext';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import { QueryClient } from 'react-query';
@@ -30,7 +30,7 @@ import Wishlist from './Components/WishList/WishList';
 
 
 function App() {
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: "", element: <LayOut />, errorElement: <ErrorPage />, children: [
         { index: true, element: <Home /> },
